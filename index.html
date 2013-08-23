@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>redis-sinatra by redis-store</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">redis-sinatra</h1>
+        <p class="header">Redis stores for Sinatra</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/redis-store/redis-sinatra/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/redis-store/redis-sinatra/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/redis-store/redis-sinatra">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/redis-store">redis-store</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a name="redis-stores-for-sinatra" class="anchor" href="#redis-stores-for-sinatra"><span class="octicon octicon-link"></span></a>Redis stores for Sinatra</h1>
+
+<p><strong><code>redis-sinatra</code></strong> provides a Redis backed cache store for <strong>Sinatra</strong>. See the main <a href="https://github.com/redis-store/redis-store">redis-store readme</a> for general guidelines.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight"><pre><span class="c1"># Gemfile</span>
+<span class="n">gem</span> <span class="s1">'redis-sinatra'</span>
+</pre></div>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<div class="highlight"><pre><span class="nb">require</span> <span class="s1">'sinatra'</span>
+<span class="nb">require</span> <span class="s1">'redis-sinatra'</span>
+
+<span class="k">class</span> <span class="nc">MyApp</span> <span class="o">&lt;</span> <span class="ss">Sinatra</span><span class="p">:</span><span class="ss">:Base</span>
+  <span class="n">register</span> <span class="ss">Sinatra</span><span class="p">:</span><span class="ss">:Cache</span>
+
+  <span class="n">get</span> <span class="s1">'/hi'</span> <span class="k">do</span>
+    <span class="n">settings</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">'greet'</span><span class="p">)</span> <span class="p">{</span> <span class="s1">'Hello, World!'</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Keep in mind that the above fetch will return <code>"OK"</code> on success, not the return of the block.</p>
+
+<h2>
+<a name="running-tests" class="anchor" href="#running-tests"><span class="octicon octicon-link"></span></a>Running tests</h2>
+
+<div class="highlight"><pre><span class="n">gem</span> <span class="n">install</span> <span class="n">bundler</span>
+<span class="n">git</span> <span class="nb">clone</span> <span class="ss">git</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">store</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">sinatra</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">redis</span><span class="o">-</span><span class="n">sinatra</span>
+<span class="n">bundle</span> <span class="n">install</span>
+<span class="n">bundle</span> <span class="nb">exec</span> <span class="n">rake</span>
+</pre></div>
+
+<p>If you are on <strong>Snow Leopard</strong> you have to run <code>env ARCHFLAGS="-arch x86_64" bundle exec rake</code></p>
+
+<h2>
+<a name="copyright" class="anchor" href="#copyright"><span class="octicon octicon-link"></span></a>Copyright</h2>
+
+<p>(c) 2009 - 2013 Luca Guidi - <a href="http://lucaguidi.com">http://lucaguidi.com</a>, released under the MIT license</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
