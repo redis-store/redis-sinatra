@@ -1,6 +1,6 @@
 # Redis stores for Sinatra
 
-__`redis-sinatra`__ provides a Redis backed cache store for __Sinatra__. See the main [redis-store readme](https://github.com/jodosha/redis-store) for general guidelines.
+__`redis-sinatra`__ provides a Redis backed cache store for __Sinatra__. See the main [redis-store readme](https://github.com/redis-store/redis-store) for general guidelines.
 
 ## Installation
 
@@ -30,7 +30,7 @@ Keep in mind that the above fetch will return `"OK"` on success, not the return 
 
 ```ruby
 gem install bundler
-git clone git://github.com/jodosha/redis-sinatra.git
+git clone git://github.com/redis-store/redis-sinatra.git
 cd redis-sinatra
 bundle install
 bundle exec rake
