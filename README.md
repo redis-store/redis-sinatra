@@ -9,7 +9,7 @@ __`redis-sinatra`__ provides a Redis backed cache store for __Sinatra__. See the
 gem 'redis-sinatra'
 ```
 
-### Usage
+## Usage
 
 ```ruby
 require 'sinatra'
@@ -38,6 +38,10 @@ bundle exec rake
 
 If you are on **Snow Leopard** you have to run `env ARCHFLAGS="-arch x86_64" bundle exec rake`
 
+## Status
+
+[![Gem Version](https://badge.fury.io/rb/redis-sinatra.png)](http://badge.fury.io/rb/redis-sinatra) [![Build Status](https://secure.travis-ci.org/redis-store/redis-sinatra.png?branch=master)](http://travis-ci.org/jodosha/redis-sinatra?branch=master) [![Code Climate](https://codeclimate.com/github/jodosha/redis-store.png)](https://codeclimate.com/github/redis-store/redis-sinatra)
+
 ## Copyright
 
-(c) 2009 - 2013 Luca Guidi - [http://lucaguidi.com](http://lucaguidi.com), released under the MIT license
+2009 - 2013 Luca Guidi - [http://lucaguidi.com](http://lucaguidi.com), released under the MIT license
