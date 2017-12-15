@@ -1,4 +1,3 @@
-require 'sinatra'
 require 'redis-store'
 require 'redis-sinatra/version'
 require 'sinatra/cache/redis_store'

@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'redis-store', '>= 1.1', '< 2'
-  s.add_dependency 'sinatra',     '~> 1.4.0'
 
   s.add_development_dependency 'rake',     '~> 10'
   s.add_development_dependency 'bundler',  '~> 1.3'
